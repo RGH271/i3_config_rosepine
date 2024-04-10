@@ -12,6 +12,7 @@
 A few notes:
  - Remember to use middle mouse button to copy + paste in the i3 default terminal!!
  - In archinstall, remember to set firefox and git to install (and neofetch aswell if you want)
+ - Remember to press ESC when first booting i3 to not create a config file automatically so theres not conflict later on
 
 
 ## Install the Dependencies
