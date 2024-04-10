@@ -267,7 +267,7 @@ client.urgent           $u-bgcolor      $u-bgcolor      $text           $u-bgcol
 
 
 # wallpaper
-exec_always feh --bg-fill ~/Downloads/wallpaper.jpg
+exec_always feh --bg-fill ~/.config/wallpaper/wallpaper.jpg
 
 # Shortcut for Lockscreen
 bindsym $mod+x exec /home/$USER/.config/scripts/lock
