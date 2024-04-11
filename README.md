@@ -21,7 +21,7 @@ A few notes:
 sudo pacman -S spotify-launcher feh picom materia-gtk-theme papirus-icon-theme lxappearance ttf-font-awesome ttf-ubuntu-font-family ttf-droid
 pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 cd ~
-yay vesktop
+yay vesktop-bin
 git clone https://git.suckless.org/st && cd st && sudo make clean install
 cd ~
 sudo rm -rf st && sudo rm -rf yay-bin
