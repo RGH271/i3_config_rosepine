@@ -45,6 +45,7 @@ Copy and paste this to recommit:
 
 ```
 cd ~/i3_config && git pull
+cd ~
 sudo rm -r ~/i3_config/wallpaper/* && sudo cp ~/.config/wallpaper/wallpaper.jpg ~/i3_config/wallpaper/
 sudo rm -r ~/i3_config/scripts/* && sudo cp ~/.config/scripts/* ~/i3_config/scripts/
 sudo rm -r ~/i3_config/main_conf_files/*
