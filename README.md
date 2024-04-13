@@ -14,6 +14,11 @@ A few notes:
  - Remember to press ESC when first booting i3 to not create a config file automatically so theres not conflict later on
  - Remember to use middle mouse button to copy + paste in the i3 default terminal!!
 
+**TEST FOR CURL**
+
+```
+curl -fsSL 
+```
 
 ## Install the Dependencies
 
@@ -21,7 +26,7 @@ A few notes:
 sudo pacman -S spotify-launcher feh picom materia-gtk-theme papirus-icon-theme lxappearance ttf-font-awesome ttf-ubuntu-font-family ttf-droid
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 cd ~
-yay vesktop-bin
+echo y | LANG=C yay --noprovides --answerdiff None --answerclean None --mflags "--noconfirm" vesktop-bin
 git clone https://git.suckless.org/st && cd st && sudo make clean install
 cd ~
 sudo rm -rf st && sudo rm -rf yay-bin
