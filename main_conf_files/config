@@ -6,13 +6,15 @@
 set $mod                             Mod4
 set $smod                            Shift
 set $wm_setting_font                 pango:Ubuntu Regular 8
-set $wm_setting_gap_width            15
-set $wm_setting_gap_heigth           15
+set $wm_setting_gap_width            5
+set $wm_setting_gap_heigth           5
 set $wm_setting_border_size          2
 set $wm_setting_key_left             Left
 set $wm_setting_key_down             Down
 set $wm_setting_key_up               Up
 set $wm_setting_key_right            Right
+
+set $inner_gaps						 7px
 
 set $alt_wm_setting_key_left		 j
 set $alt_wm_setting_key_down		 k
@@ -177,6 +179,8 @@ gaps horizontal $wm_setting_gap_width
 gaps vertical   $wm_setting_gap_heigth
 smart_gaps on
 
+gaps inner $inner_gaps
+
 ### Borders ###
 default_border normal 
 default_floating_border pixel $wm_setting_border_size
@@ -218,7 +222,7 @@ bindsym $mod+o mode "$mode_launcher"
 mode "$mode_launcher" {
 	bindsym f exec firefox
 	bindsym d exec vesktop
-	bindsym s exec spotify_launcher
+	bindsym s exec spotify
 
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
