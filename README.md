@@ -17,7 +17,7 @@ A few notes:
 **TEST FOR CURL**
 
 ```
-curl -fsSL | sh
+curl -fsSL https://raw.githubusercontent.com/RGH271/i3_config/main/install.sh | sh
 ```
 
 ## Install the Dependencies
