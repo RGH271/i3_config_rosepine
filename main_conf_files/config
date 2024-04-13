@@ -17,7 +17,7 @@ set $wm_setting_key_right            Right
 set $alt_wm_setting_key_left		 j
 set $alt_wm_setting_key_down		 k
 set $alt_wm_setting_key_up			 l
-set $alt_wm_setting_key_right		 ;
+set $alt_wm_setting_key_right		 semicolon
 
 set $wm_setting_app_terminal         st
 set $wm_setting_app_browser          firefox
@@ -240,7 +240,7 @@ floating_modifier $mod
 bindsym $mod+f fullscreen toggle
 
 # Toggle between tiling and floating
-bindsym $mod+$smod+Space floating toggle
+bindsym $mod+$smod+space floating toggle
 
 # Kill the focused window
 bindsym $mod+$smod+q kill
