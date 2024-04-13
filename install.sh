@@ -3,13 +3,14 @@
 
 # install dependencies
 sudo pacman -S feh picom materia-gtk-theme papirus-icon-theme lxappearance ttf-font-awesome ttf-ubuntu-font-family ttf-droid breeze-icons
+git clone https://github.com/SueDonham/Colloid-pastel-icons.git && cd ~/Colloid-pastel-icons/cursors/ && ./install.sh && cd ~
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 cd ~
 yay -S vesktop-bin
 yay -S spotify
 git clone https://git.suckless.org/st && cd st && sudo make clean install
 cd ~
-sudo rm -rf st && sudo rm -rf yay-bin
+sudo rm -rf st && sudo rm -rf yay-bin && sudo rm -rf Colloid-pastel-icons
 
 
 # now clone the configs
