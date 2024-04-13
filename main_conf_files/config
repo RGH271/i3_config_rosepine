@@ -216,20 +216,18 @@ bar {
 }
 
 # code to open a common app launcher!!
-set $mode_launcher Launch: [f]irefox [d]iscord [s]potify
+set $mode_launcher Launch: [f]irefox [d]iscord
 bindsym $mod+o mode "$mode_launcher"
 
 mode "$mode_launcher" {
 	bindsym f exec firefox
 	bindsym d exec vesktop
-	bindsym s exec spotify
 
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
 	bindsym $mod+o mode "default"
 	bindsym f mode "default"
 	bindsym d mode "default"
-	bindsym s mode "default"
 }
 
 
