@@ -23,10 +23,11 @@ curl -fsSL https://raw.githubusercontent.com/RGH271/i3_config/main/install.sh | 
 ## Install the Dependencies
 
 ```
-sudo pacman -S spotify-launcher feh picom materia-gtk-theme papirus-icon-theme lxappearance ttf-font-awesome ttf-ubuntu-font-family ttf-droid
+sudo pacman -S feh picom materia-gtk-theme papirus-icon-theme lxappearance ttf-font-awesome ttf-ubuntu-font-family ttf-droid breeze-icons
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 cd ~
-echo y | LANG=C yay --noprovides --answerdiff None --answerclean None --mflags "--noconfirm" vesktop-bin
+yay -S vesktop-bin
+yay -S spotify
 git clone https://git.suckless.org/st && cd st && sudo make clean install
 cd ~
 sudo rm -rf st && sudo rm -rf yay-bin
