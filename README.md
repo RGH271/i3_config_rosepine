@@ -17,7 +17,7 @@ A few notes:
 **TEST FOR CURL**
 
 ```
-curl -fsSL 
+curl -fsSL | sh
 ```
 
 ## Install the Dependencies
