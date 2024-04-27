@@ -1,18 +1,18 @@
 # Dependencies
 
- - yay
- - st
- - spotify
- - vesktop
- - git probably
- - pulse audio
+- yay
+- st
+- spotify
+- vesktop
+- git probably
+- pulse audio
 
 # Commands
 
 A few notes:
- - In archinstall, remember to set firefox and git to install (and neofetch aswell if you want)
- - Remember to press ESC when first booting i3 to not create a config file automatically so theres not conflict later on
- - Remember to use middle mouse button to copy + paste in the i3 default terminal!!
+- In archinstall, remember to set firefox and git to install (and neofetch aswell if you want)
+- Remember to press ESC when first booting i3 to not create a config file automatically so theres not conflict later on
+- Remember to use middle mouse button to copy + paste in the i3 default terminal!!
 
 **TEST FOR CURL**
 
@@ -61,3 +61,18 @@ sudo cp ~/.config/i3/config ~/i3_config/main_conf_files/ && sudo cp ~/.config/i3
 
 
 **Don't forget to recommit to git!!!**
+
+# things to install post install if not using a desktop and instead using minimal install
+
+Drivers
+
+- mesa vulkan-intel xf86-video-intel
+
+- ly
+for ly run ly.service
+
+- xorg-xinit xorg-server
+
+- i3-wm dmenu
+
+run `sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc` and add `exec i3` at the end after commenting everything out
