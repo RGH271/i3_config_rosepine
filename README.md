@@ -69,7 +69,8 @@ Drivers
 - mesa vulkan-intel xf86-video-intel
 
 - ly
-for ly run ly.service
+
+*for ly run ly.service*
 
 - xorg-xinit xorg-server
 
