@@ -71,6 +71,7 @@ Drivers
 - ly
 
 *for ly run ly.service*
+or alternatively try: `sudo systemctl enable ly` (untested)
 
 - xorg-xinit xorg-server
 
