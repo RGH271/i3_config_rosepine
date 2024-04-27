@@ -74,6 +74,6 @@ Drivers
 
 - xorg-xinit xorg-server
 
-- i3-wm dmenu
+- i3-wm dmenu i3blocks
 
 run `sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc` and add `exec i3` at the end after commenting everything out
