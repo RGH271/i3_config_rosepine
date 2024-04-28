@@ -64,6 +64,8 @@ sudo cp ~/.config/i3/config ~/i3_config/main_conf_files/ && sudo cp ~/.config/i3
 
 # things to install post install if not using a desktop and instead using minimal install
 
+**DOESNT CURRENTLY WORK - JUST USE ARCHINSTALL**
+
 Drivers
 
 - mesa vulkan-intel xf86-video-intel
