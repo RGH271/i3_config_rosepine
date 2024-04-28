@@ -23,7 +23,7 @@ curl -fsSL https://raw.githubusercontent.com/RGH271/i3_config/main/install.sh | 
 ## Install the Dependencies
 
 ```
-sudo pacman -S feh picom materia-gtk-theme papirus-icon-theme lxappearance ttf-font-awesome ttf-ubuntu-font-family ttf-droid breeze-icons python-dbus ttf-firacode
+sudo pacman -S feh picom materia-gtk-theme papirus-icon-theme lxappearance ttf-font-awesome ttf-ubuntu-font-family ttf-droid breeze-icons python-dbus ttf-fira-code
 git clone https://github.com/SueDonham/Colloid-pastel-icons.git && cd ~/Colloid-pastel-icons/cursors/ && ./install.sh && cd ~
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 cd ~
