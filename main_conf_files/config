@@ -24,6 +24,7 @@ set $alt_wm_setting_key_right		 semicolon
 set $wm_setting_app_terminal         st
 set $wm_setting_app_browser          firefox
 set $wm_setting_app_launcher         rofi -show drun
+set $wm_setting_app_launcher_alt     rofi -show window
 set $wm_setting_app_compositor       picom
 
 set $wm_color_border_active_bg       #81A1C1
@@ -71,6 +72,8 @@ bindsym $mod+$smod+Return exec $wm_setting_app_browser
 
 # Start a program launcher
 bindsym $mod+d exec $wm_setting_app_launcher
+
+bindsym $mod+$smod+d exec $wm_setting_app_launcher
 
 # Run a window compositor (for effects like transparency or full VSync)
 exec_always --no-startup-id $wm_setting_app_compositor
