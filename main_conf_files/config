@@ -76,10 +76,10 @@ bindsym $mod+d exec $wm_setting_app_launcher
 exec_always --no-startup-id $wm_setting_app_compositor
 
 # Transparency with picom compositor
-exec_always picom -f
+exec_always --no-startup-id picom -f
 
 # wallpaper
-exec_always feh --bg-fill ~/.config/wallpaper/wallpaper.jpg
+exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper/wallpaper.jpg
 
 ### Workspaces ###
 # Define names for default workspaces for which we configure key bindings later on.
