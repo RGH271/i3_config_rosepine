@@ -30,8 +30,7 @@ cd ~
 curl https://sh.rustup.rs -sSf | sh
 yay -S vesktop-bin
 yay -S spotify
-git clone https://github.com/RGH271/st.git && cd st 
-sudo patch -Np1 -i st-scrollback-0.8.5.diff && sudo make clean install
+git clone https://github.com/RGH271/st.git && cd st && sudo make clean install
 cd ~
 sudo rm -rf st && sudo rm -rf yay-bin && sudo rm -rf Colloid-pastel-icons
 ```
