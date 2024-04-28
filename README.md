@@ -43,7 +43,7 @@ git clone https://github.com/RGH271/i3_config_rosepine.git
 mkdir ~/.config/wallpaper && sudo cp ~/i3_config_rosepine/wallpaper/wallpaper.png ~/.config/wallpaper/
 sudo cp -a ~/i3_config_rosepine/scripts/. ~/.config/scripts/ && sudo chmod +x ~/.config/scripts/*
 mkdir .config/i3status && sudo cp ~/i3_config_rosepine/main_conf_files/i3status.conf ~/.config/i3status/ && sudo chown $USER:$USER ~/.config/i3status/i3status.conf
-mkdir ~/.config/polybar && sudo cp ~/i3_config_rosepine/polybar/* ~/.config/polybar/ && sudo chmod +x ~/.config/polybar/scripts/*.sh && sudo chmod +x ~/.config/polybar/launch.sh
+mkdir ~/.config/polybar && sudo cp ~/i3_config_rosepine/polybar/* ~/.config/polybar/ && sudo chmod +x ~/.config/polybar/scripts/updates-pacman-helper.sh && sudo chmod +x ~/.config/polybar/launch.sh
 cp ~/i3_config_rosepine/main_conf_files/config ~/.config/i3/ && sudo chmod a+rw ~/.config/i3/config
 ```
 
