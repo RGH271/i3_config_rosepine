@@ -8,7 +8,7 @@ set $smod                            Shift
 set $wm_setting_font                 pango:Fira Code 8
 set $wm_setting_gap_width            3
 set $wm_setting_gap_heigth           3
-set $wm_setting_border_size          2
+set $wm_setting_border_size          1
 set $wm_setting_key_left             Left
 set $wm_setting_key_down             Down
 set $wm_setting_key_up               Up
