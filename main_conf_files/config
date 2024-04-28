@@ -23,7 +23,7 @@ set $alt_wm_setting_key_right		 semicolon
 
 set $wm_setting_app_terminal         st
 set $wm_setting_app_browser          firefox
-set $wm_setting_app_launcher         dmenu_run
+set $wm_setting_app_launcher         rofi -show drun
 set $wm_setting_app_compositor       picom
 
 set $wm_color_border_active_bg       #81A1C1
