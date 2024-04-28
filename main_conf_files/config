@@ -6,8 +6,8 @@
 set $mod                             Mod4
 set $smod                            Shift
 set $wm_setting_font                 pango:Fira Code 8
-set $wm_setting_gap_width            5
-set $wm_setting_gap_heigth           5
+set $wm_setting_gap_width            3
+set $wm_setting_gap_heigth           3
 set $wm_setting_border_size          2
 set $wm_setting_key_left             Left
 set $wm_setting_key_down             Down
@@ -15,6 +15,7 @@ set $wm_setting_key_up               Up
 set $wm_setting_key_right            Right
 
 set $inner_gaps						 7px
+set $outer_gaps			     4px
 
 set $alt_wm_setting_key_left		 j
 set $alt_wm_setting_key_down		 k
@@ -73,7 +74,7 @@ bindsym $mod+$smod+Return exec $wm_setting_app_browser
 # Start a program launcher
 bindsym $mod+d exec $wm_setting_app_launcher
 
-bindsym $mod+$smod+d exec $wm_setting_app_launcher
+bindsym $mod+$smod+d exec $wm_setting_app_launcher_alt
 
 # Run a window compositor (for effects like transparency or full VSync)
 exec_always --no-startup-id $wm_setting_app_compositor
@@ -83,6 +84,10 @@ exec_always --no-startup-id picom -f
 
 # wallpaper
 exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper/wallpaper.jpg
+
+# start polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+#exec_always polybar
 
 ### Workspaces ###
 # Define names for default workspaces for which we configure key bindings later on.
@@ -178,11 +183,12 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ### Gaps ###
-gaps horizontal $wm_setting_gap_width
-gaps vertical   $wm_setting_gap_heigth
-smart_gaps on
+#gaps horizontal $wm_setting_gap_width
+#gaps vertical   $wm_setting_gap_heigth
+#smart_gaps on
 
 gaps inner $inner_gaps
+gaps outer $outer_gaps
 
 ### Borders ###
 default_border normal 
@@ -200,23 +206,23 @@ client.urgent           $u_bgcolor                   $u_bgcolor                 
 #client.background       $wm_color_background
 
 ### i3bar ###
-bar {
-	position         $bar_setting_position
-	mode             $bar_setting_mode
-	font             $bar_setting_font
+#bar {
+	#position         $bar_setting_position
+	#mode             $bar_setting_mode
+	#font             $bar_setting_font
 	#separator_symbol $bar_setting_separator
-	status_command   $bar_setting_statusCommand
-	tray_output      $bar_setting_trayoutput
+	#status_command   $bar_setting_statusCommand
+	#tray_output      $bar_setting_trayoutput
 
-	colors {
-		background $bgcolor
-        separator #191919
+	#colors {
+#		background $bgcolor
+        #separator #191919
         #                       border          background      text
-        focused_workspace       $in_bgcolor	    $in_bgcolor	    $text
-        inactive_workspace      $barcol		    $barcol		    $text
-        urgent_workspace        $u_bgcolor      $u_bgcolor      $text 
-	}
-}
+        #focused_workspace       $in_bgcolor	    $in_bgcolor	    $text
+        #inactive_workspace      $barcol		    $barcol		    $text
+        #urgent_workspace        $u_bgcolor      $u_bgcolor      $text 
+	#}
+#}
 
 # code to open a common app launcher!!
 set $mode_launcher Launch: [f]irefox [d]iscord
