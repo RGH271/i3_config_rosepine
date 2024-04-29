@@ -52,12 +52,12 @@ cp ~/i3_config_rosepine/main_conf_files/config ~/.config/i3/ && sudo chmod a+rw 
 Copy and paste this to recommit:
 
 ```
-cd ~/i3_config && git pull
-cd ~
-sudo rm -r ~/i3_config/wallpaper/* && sudo cp ~/.config/wallpaper/wallpaper.jpg ~/i3_config/wallpaper/
-sudo rm -r ~/i3_config/scripts/* && sudo cp ~/.config/scripts/* ~/i3_config/scripts/
-sudo rm -r ~/i3_config/main_conf_files/*
-sudo cp ~/.config/i3/config ~/i3_config/main_conf_files/ && sudo cp ~/.config/i3blocks/i3blocks.conf ~/i3_config/main_conf_files/ && sudo cp ~/.config/i3status/i3status.conf ~/i3_config/main_conf_files/
+cd ~/i3_config_rosepine && git pull && cd
+sudo rm -r ~/i3_config_rosepine/wallpaper/* && sudo cp ~/.config/wallpaper/* ~/i3_config_rosepine/wallpaper/
+sudo rm -r ~/i3_config_rosepine/picom/* && sudo cp ~/.config/picom/picom.conf ~/i3_config_rosepine/picom/
+sudo rm -r ~/i3_config_rosepine/polybar/* && sudo cp -r ~/.config/polybar/* ~/i3_config_rosepine/polybar/
+sudo rm -r ~/i3_config_rosepine/main_conf_files/*
+sudo cp ~/.config/i3/config ~/i3_config_rosepine/main_conf_files/
 ```
 
 
