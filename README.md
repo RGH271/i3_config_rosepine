@@ -52,6 +52,10 @@ cp ~/i3_config_rosepine/main_conf_files/config ~/.config/i3/ && sudo chmod a+rw 
 Copy and paste this to recommit:
 
 ```
+curl https://raw.githubusercontent.com/RGH271/i3_config_rosepine/main/resave.sh | sh
+```
+
+```
 cd ~/i3_config_rosepine && git pull && cd
 sudo rm -r ~/i3_config_rosepine/wallpaper/* && sudo cp ~/.config/wallpaper/* ~/i3_config_rosepine/wallpaper/
 sudo rm -r ~/i3_config_rosepine/picom/* && sudo cp ~/.config/picom/picom.conf ~/i3_config_rosepine/picom/
