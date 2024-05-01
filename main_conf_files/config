@@ -6,16 +6,16 @@
 set $mod                             Mod4
 set $smod                            Shift
 set $wm_setting_font                 pango:Fira Code 10
-set $wm_setting_gap_width            3
-set $wm_setting_gap_heigth           3
+set $wm_setting_gap_width            2
+set $wm_setting_gap_heigth           2
 set $wm_setting_border_size          0
 set $wm_setting_key_left             Left
 set $wm_setting_key_down             Down
 set $wm_setting_key_up               Up
 set $wm_setting_key_right            Right
 
-set $inner_gaps						 7px
-set $outer_gaps			     4px
+set $inner_gaps						 6px
+set $outer_gaps			     		 3px
 
 set $alt_wm_setting_key_left		 j
 set $alt_wm_setting_key_down		 k
@@ -65,7 +65,7 @@ bindsym $mod+d exec $wm_setting_app_launcher
 bindsym $mod+$smod+d exec $wm_setting_app_launcher_alt
 
 # Run a window compositor (for effects like transparency or full VSync)
-exec_always --no-startup-id $wm_setting_app_compositor -f
+exec_always --no-startup-id $wm_setting_app_compositor -b
 
 # wallpaper
 exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper/wallpaper.png
