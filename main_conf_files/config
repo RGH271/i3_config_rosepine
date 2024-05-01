@@ -5,10 +5,10 @@
 ### Variables for settings (This makes changing them WAY easyer!) ###
 set $mod                             Mod4
 set $smod                            Shift
-set $wm_setting_font                 pango:Fira Code 8
+set $wm_setting_font                 pango:Fira Code 10
 set $wm_setting_gap_width            3
 set $wm_setting_gap_heigth           3
-set $wm_setting_border_size          1
+set $wm_setting_border_size          0
 set $wm_setting_key_left             Left
 set $wm_setting_key_down             Down
 set $wm_setting_key_up               Up
@@ -65,17 +65,13 @@ bindsym $mod+d exec $wm_setting_app_launcher
 bindsym $mod+$smod+d exec $wm_setting_app_launcher_alt
 
 # Run a window compositor (for effects like transparency or full VSync)
-exec_always --no-startup-id $wm_setting_app_compositor
-
-# Transparency with picom compositor
-exec_always --no-startup-id picom -f
+exec_always --no-startup-id $wm_setting_app_compositor -f
 
 # wallpaper
 exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper/wallpaper.png
 
 # start polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-#exec_always polybar
 
 ### Workspaces ###
 # Define names for default workspaces for which we configure key bindings later on.
@@ -179,17 +175,17 @@ gaps inner $inner_gaps
 gaps outer $outer_gaps
 
 ### Borders ###
-default_border normal 
-default_floating_border pixel $wm_setting_border_size
+default_border none
+default_floating_border none
 smart_borders on
 
 # Teming border and Windows --------------
 # target                 title     bg    text   indicator  border
-client.focused           $rose     $base $text  $rose      $rose
-client.focused_inactive  $text     $base $text  $subtle    $surface
-client.unfocused         $text     $base $text  $overlay   $overlay
-client.urgent            $text     $base $text  $love      $love
-client.placeholder       $base     $base $text  $overlay   $overlay
+client.focused           $rose     $base $text  $rose      
+client.focused_inactive  $text     $base $text  $subtle    
+client.unfocused         $text     $base $text  $overlay   
+client.urgent            $text     $base $text  $love      
+client.placeholder       $base     $base $text  $overlay   
 client.background        $base
 
 # code to open a common app launcher!!
