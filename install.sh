@@ -2,49 +2,49 @@
 
 
 # install graphical softwares
-echo "Installing graphics software..."
-sudo pacman -S --noconfirm feh picom lxappearance rofi
+printf "Installing graphics software..."
+sudo pacman -S --noconfirm polybar feh picom lxappearance rofi
 
 # install fonts
-echo "Installing fonts..."
+printf "\nInstalling fonts..."
 sudo pacman -S --noconfirm ttf-font-awesome ttf-ubuntu-font-family ttf-droid ttf-firacode-nerd
 
 # install other dependencies
-echo "Installing other dependencies..."
+printf "\nInstalling other dependencies..."
 sudo pacman -S --noconfirm breeze-icons dolphin python-dbus python-gobject pacman-contrib
 
 # INstall the cursor
-echo "Installing the cursor..."
+printf "\nInstalling the cursor..."
 git clone https://github.com/SueDonham/Colloid-pastel-icons.git && cd ~/Colloid-pastel-icons/cursors/ && ./install.sh && cd 
 
 # install rust/cargo
-echo "Installing rust..."
+printf "\nInstalling rust..."
 curl https://sh.rustup.rs -sSf | sh
 
-echo "Do you want to install YAY? (y/N)"
+printf "Do you want to install YAY? (y/N)"
 read -r choice < /dev/tty
 if [ "$choice" = "Y" ] || [ "$choice" = "y" ]; then
-    echo "Installing YAY..."
+    printf "\nInstalling YAY..."
     sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && cd ~
 fi
 
-echo "Do you want to install vesktop? (y/N)"
+printf "Do you want to install vesktop? (y/N)"
 read -r choice < /dev/tty
 if [ "$choice" = "Y" ] || [ "$choice" = "y" ]; then
-    echo "Installing vesktop..."
+    printf "\nInstalling vesktop..."
     yay -S vesktop-bin
 fi
 
-echo "Do you want to install spotify? (y/N)"
+printf "Do you want to install spotify? (y/N)"
 read -r choice < /dev/tty
 if [ "$choice" = "Y" ] || [ "$choice" = "y" ]; then
-    echo "Installing spotify and spotify_player..."
+    printf "\nInstalling spotify and spotify_player..."
     yay -S spotify-player
     cargo install spotify_player
 fi
 
 # install simple terminal
-echo "Installing the terminal..."
+printf "\nInstalling the terminal..."
 git clone https://github.com/RGH271/st.git && cd st && sudo make clean install && cd
 
 # remove the repos
