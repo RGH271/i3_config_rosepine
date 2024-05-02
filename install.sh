@@ -21,21 +21,21 @@ git clone https://github.com/SueDonham/Colloid-pastel-icons.git && cd ~/Colloid-
 echo "Installing rust..."
 curl https://sh.rustup.rs -sSf | sh
 
-echo "Do you want to install YAY? (Y/n)"
+echo "Do you want to install YAY? (y/N)"
 read -r choice < /dev/tty
 if [ "$choice" = "Y" ] || [ "$choice" = "y" ]; then
     echo "Installing YAY..."
     sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && cd ~
 fi
 
-echo "Do you want to install vesktop? (Y/n)"
+echo "Do you want to install vesktop? (y/N)"
 read -r choice < /dev/tty
 if [ "$choice" = "Y" ] || [ "$choice" = "y" ]; then
     echo "Installing vesktop..."
     yay -S vesktop-bin
 fi
 
-echo "Do you want to install spotify? (Y/n)"
+echo "Do you want to install spotify? (y/N)"
 read -r choice < /dev/tty
 if [ "$choice" = "Y" ] || [ "$choice" = "y" ]; then
     echo "Installing spotify and spotify_player..."
@@ -45,7 +45,7 @@ fi
 
 # install simple terminal
 echo "Installing the terminal..."
-git clone https://github.com/RGH271/st.git && cd st && sudo make clean install
+git clone https://github.com/RGH271/st.git && cd st && sudo make clean install && cd
 
 # remove the repos
 sudo rm -rf st && sudo rm -rf yay-bin && sudo rm -rf Colloid-pastel-icons
