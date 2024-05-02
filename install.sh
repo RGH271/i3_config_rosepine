@@ -11,7 +11,7 @@ sudo pacman -S --noconfirm ttf-font-awesome ttf-ubuntu-font-family ttf-droid ttf
 
 # install other dependencies
 printf "\nInstalling other dependencies..."
-sudo pacman -S --noconfirm breeze-icons dolphin python-dbus python-gobject pacman-contrib
+sudo pacman -S --noconfirm breeze-icons dolphin python-dbus python-gobject pacman-contrib unzip
 
 # INstall the cursor
 printf "\nInstalling the cursor..."
