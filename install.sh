@@ -3,7 +3,7 @@
 
 # install graphical softwares
 echo "Installing graphics software..."
-sudo pacman -S --noconfirm feh picom lxappearance 
+sudo pacman -S --noconfirm feh picom lxappearance rofi
 
 # install fonts
 echo "Installing fonts..."
@@ -11,7 +11,7 @@ sudo pacman -S --noconfirm ttf-font-awesome ttf-ubuntu-font-family ttf-droid ttf
 
 # install other dependencies
 echo "Installing other dependencies..."
-sudo pacman -S --noconfirm breeze-icons dolphin python-dbus  python-gobject pacman-contrib
+sudo pacman -S --noconfirm breeze-icons dolphin python-dbus python-gobject pacman-contrib
 
 # INstall the cursor
 echo "Installing the cursor..."
