@@ -5,7 +5,7 @@
 ### Variables for settings (This makes changing them WAY easyer!) ###
 set $mod                             Mod4
 set $smod                            Shift
-set $wm_setting_font                 pango:Fira Code 10
+set $wm_setting_font                 pango:Fira Code Nerd 10
 set $wm_setting_gap_width            2
 set $wm_setting_gap_heigth           2
 set $wm_setting_border_size          0
@@ -27,6 +27,8 @@ set $wm_setting_app_browser          firefox
 set $wm_setting_app_launcher         rofi -show drun
 set $wm_setting_app_launcher_alt     rofi -show window
 set $wm_setting_app_compositor       picom
+
+# OBSELETE NOW IM USING POLYBAR
 
 set $bar_setting_position            bottom
 set $bar_setting_mode                dock

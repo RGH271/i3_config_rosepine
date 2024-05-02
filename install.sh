@@ -7,7 +7,7 @@ sudo pacman -S --noconfirm feh picom lxappearance rofi
 
 # install fonts
 echo "Installing fonts..."
-sudo pacman -S --noconfirm ttf-font-awesome ttf-ubuntu-font-family ttf-droid ttf-firacode 
+sudo pacman -S --noconfirm ttf-font-awesome ttf-ubuntu-font-family ttf-droid ttf-firacode-nerd
 
 # install other dependencies
 echo "Installing other dependencies..."
@@ -52,9 +52,17 @@ sudo rm -rf st && sudo rm -rf yay-bin && sudo rm -rf Colloid-pastel-icons
 
 
 # now clone the configs
+# clone the repo
 git clone https://github.com/RGH271/i3_config_rosepine.git
+
+# set the wallpaper
 mkdir ~/.config/wallpaper && sudo cp ~/i3_config_rosepine/wallpaper/wallpaper.png ~/.config/wallpaper/
-sudo cp -a ~/i3_config_rosepine/scripts/. ~/.config/scripts/ && sudo chmod +x ~/.config/scripts/*
-mkdir .config/i3status && sudo cp ~/i3_config_rosepine/main_conf_files/i3status.conf ~/.config/i3status/ && sudo chown $USER:$USER ~/.config/i3status/i3status.conf
-mkdir ~/.config/polybar && sudo cp ~/i3_config_rosepine/polybar/* ~/.config/polybar/ && sudo chmod +x ~/.config/polybar/scripts/updates-pacman-helper.sh && sudo chmod +x ~/.config/polybar/launch.sh
+
+# copy polybar configs
+mkdir ~/.config/polybar && sudo cp -r ~/i3_config_rosepine/polybar/* ~/.config/polybar/ && sudo chmod +x ~/.config/polybar/scripts/updates-pacman-helper.sh && sudo chmod +x ~/.config/polybar/launch.sh
+
+# set the picom
+mkdir ~/.config/picom && sudo cp ~/i3_config_rosepine/picom/picom.conf ~/.config/picom/
+
+# set master i3 config
 cp ~/i3_config_rosepine/main_conf_files/config ~/.config/i3/ && sudo chmod a+rw ~/.config/i3/config
