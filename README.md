@@ -4,8 +4,8 @@
 - st
 - spotify
 - vesktop
-- git probably
-- pulse audio
+- git
+- pipewire audio
 
 # Commands
 
