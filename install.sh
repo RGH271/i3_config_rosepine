@@ -3,27 +3,29 @@
 
 # install graphical softwares
 printf "Installing graphics software...\n"
-#sudo pacman -S --noconfirm polybar feh picom lxappearance rofi
+sudo pacman -S --noconfirm polybar feh picom lxappearance rofi
 
 # install fonts
 printf "\nInstalling fonts...\n"
-#sudo pacman -S --noconfirm ttf-font-awesome ttf-ubuntu-font-family ttf-droid ttf-firacode-nerd
+sudo pacman -S --noconfirm ttf-font-awesome ttf-ubuntu-font-family ttf-droid ttf-firacode-nerd
 
 # install other dependencies
 printf "\nInstalling other dependencies...\n"
-#sudo pacman -S --noconfirm breeze-icons dolphin python-dbus python-gobject pacman-contrib unzip
+sudo pacman -S --noconfirm breeze-icons dolphin python-dbus python-gobject pacman-contrib unzip
 
 # INstall the cursor
 printf "\nInstalling the cursor...\n"
-#git clone https://github.com/SueDonham/Colloid-pastel-icons.git && cd ~/Colloid-pastel-icons/cursors/ && ./install.sh && cd 
+git clone https://github.com/SueDonham/Colloid-pastel-icons.git && cd ~/Colloid-pastel-icons/cursors/ && ./install.sh && cd 
 
 # install rust/cargo
 printf "\nInstalling rust...\n"
-#curl https://sh.rustup.rs -sSf | sh
+curl https://sh.rustup.rs -sSf | sh
 
 # install yay
 printf "\nInstalling YAY...\n"
-#sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && cd 
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && cd 
+
+yay -S librewolf-bin
 
 printf "Do you want to install vesktop? (y/N)"
 read -r choice < /dev/tty

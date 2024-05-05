@@ -23,7 +23,7 @@ set $alt_wm_setting_key_up			 l
 set $alt_wm_setting_key_right		 semicolon
 
 set $wm_setting_app_terminal         st
-set $wm_setting_app_browser          firefox
+set $wm_setting_app_browser          librewolf
 set $wm_setting_app_launcher         rofi -show drun
 set $wm_setting_app_launcher_alt     rofi -show window
 set $wm_setting_app_compositor       picom
