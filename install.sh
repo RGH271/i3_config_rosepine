@@ -16,15 +16,23 @@ sudo pacman -S --noconfirm breeze-icons dolphin python-dbus python-gobject pacma
 # INstall the cursor
 printf "\nInstalling the cursor...\n"
 git clone https://github.com/SueDonham/Colloid-pastel-icons.git && cd ~/Colloid-pastel-icons/cursors/ && ./install.sh && cd 
+sudo rm -rf Colloid-pastel-icons
 
 # install rust/cargo
 printf "\nInstalling rust...\n"
 curl https://sh.rustup.rs -sSf | sh
 
+# install simple terminal
+printf "\nInstalling the terminal...\n"
+git clone https://github.com/RGH271/st.git && cd st && sudo make clean install && cd
+sudo rm -rf st
+
 # install yay
 printf "\nInstalling YAY...\n"
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && cd 
+sudo rm -rf yay-bin
 
+: '
 yay -S librewolf-bin
 
 printf "Do you want to install vesktop? (y/N)"
@@ -44,9 +52,7 @@ if [ "$choice" = "Y" ] || [ "$choice" = "y" ]; then
     continue
 fi
 
-# install simple terminal
-printf "\nInstalling the terminal...\n"
-git clone https://github.com/RGH271/st.git && cd st && sudo make clean install && cd
+
 
 # remove the repos
 sudo rm -rf st && sudo rm -rf yay-bin && sudo rm -rf Colloid-pastel-icons
@@ -68,3 +74,5 @@ mkdir ~/.config/picom && sudo cp ~/i3_config_rosepine/picom/picom.conf ~/.config
 
 # set master i3 config
 cp ~/i3_config_rosepine/main_conf_files/config ~/.config/i3/ && sudo chmod a+rw ~/.config/i3/config
+
+'
