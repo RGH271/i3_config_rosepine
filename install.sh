@@ -7,7 +7,7 @@ sudo pacman -S --noconfirm polybar feh picom lxappearance rofi neovim
 
 # install fonts
 printf "\nInstalling fonts...\n"
-sudo pacman -S --noconfirm ttf-font-awesome ttf-ubuntu-font-family ttf-droid ttf-firacode-nerd ttf-jetbrains-mono ttf-jetbrains-mono-nerd
+sudo pacman -S --noconfirm ttf-font-awesome ttf-jetbrains-mono ttf-jetbrains-mono-nerd noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 
 # install other dependencies
 printf "\nInstalling other dependencies...\n"
