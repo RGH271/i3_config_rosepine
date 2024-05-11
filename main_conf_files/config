@@ -3,7 +3,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 ### Variables for settings (This makes changing them WAY easyer!) ###
-set $mod                             Mod4
+set $mod                             Mod1
 set $smod                            Shift
 set $wm_setting_font                 pango:Fira Code Nerd 10
 set $wm_setting_gap_width            2
@@ -62,10 +62,11 @@ bindsym $mod+Return exec $wm_setting_app_terminal
 bindsym $mod+$smod+Return exec $wm_setting_app_browser
 
 # Start a program launcher
-bindsym $mod+d exec $wm_setting_app_launcher
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-1/launcher.sh
 
 bindsym $mod+$smod+d exec $wm_setting_app_launcher_alt
 
+#bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-3/launcher.sh
 # Run a window compositor (for effects like transparency or full VSync)
 exec_always --no-startup-id $wm_setting_app_compositor -b
 
@@ -75,13 +76,19 @@ exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper/wallpaper.png
 # start polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
+# add a lock shortcut for slock
+bindsym $mod+m exec slock
+
+# add a powermenu
+bindsym $mod+$smod+p exec --no-startup-id ~/.config/rofi/powermenu/type-2/powermenu.sh
+
 ### Workspaces ###
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1: Terminal"
 set $ws2 "2: Spotify"
 set $ws3 "3: Firefox"
-set $ws4 "4"
+set $ws4 "4: Vim"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -232,3 +239,14 @@ bindsym $mod+$smod+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 popup_during_fullscreen smart
 
 force_display_urgency_hint 500 ms
+
+# add media keys
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrevious exec playerctl previous
+
