@@ -22,6 +22,13 @@ sudo rm -rf Colloid-pastel-icons
 printf "\nInstalling rust...\n"
 curl https://sh.rustup.rs -sSf | sh
 
+# install slock
+printf "\nInstall slock...\n"
+git clone https://github.com/RGH271/slock.git
+cd slock
+sudo make clean install
+cd
+
 # install simple terminal
 printf "\nInstalling the terminal...\n"
 git clone https://github.com/RGH271/st.git && cd st && sudo make clean install && cd
