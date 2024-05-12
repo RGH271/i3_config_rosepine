@@ -3,7 +3,7 @@
 
 # install graphical softwares
 printf "Installing graphics software...\n"
-sudo pacman -S --noconfirm polybar feh picom lxappearance rofi neovim
+sudo pacman -S --noconfirm polybar feh picom lxappearance rofi neovim fff
 
 # install fonts
 printf "\nInstalling fonts...\n"
