@@ -5,7 +5,7 @@
 # clone the repo
 git clone https://github.com/RGH271/i3_config_rosepine.git
 cd i3_config_rosepine
-sudo cp configfiles/* ~/.config/
+sudo cp -r configfiles/* ~/.config/
 
 # set the polybar scripts to executable
 sudo chmod +x ~/.config/polybar/scripts/updates-pacman-aurhelper.sh && sudo chmod +x ~/.config/polybar/launch.sh
