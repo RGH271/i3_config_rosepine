@@ -71,7 +71,7 @@ bindsym $mod+$smod+d exec $wm_setting_app_launcher_alt
 exec_always --no-startup-id $wm_setting_app_compositor -b
 
 # wallpaper
-exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper/wallpaper.png
+exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper/gradient.png
 
 # start polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
