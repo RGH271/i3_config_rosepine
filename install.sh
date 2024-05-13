@@ -32,7 +32,7 @@ cd
 # install simple terminal
 printf "\nInstalling the terminal...\n"
 git clone https://github.com/RGH271/st.git && cd st && sudo make clean install && cd
-sudo rm -rf st
+#sudo rm -rf st
 
 # install yay
 printf "\nInstalling YAY...\n"
