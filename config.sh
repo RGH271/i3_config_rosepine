@@ -4,7 +4,7 @@
 # now clone the configs
 # clone the repo
 git clone https://github.com/RGH271/i3_config_rosepine.git
-
+cd i3_config_rosepine
 sudo cp configfiles/* ~/.config/
 
 # set the polybar scripts to executable
