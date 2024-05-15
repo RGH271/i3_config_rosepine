@@ -1,3 +1,5 @@
+![the config](output.png)
+
 # Dependencies
 
 - yay
